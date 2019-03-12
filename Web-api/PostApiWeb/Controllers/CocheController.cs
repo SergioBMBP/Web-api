@@ -23,5 +23,20 @@ namespace PostApiWeb.Controllers
         {
             return repo.getCoche(id);
         }
+        public String Post(Coche c)
+        {
+             repo.AddCoche(c);
+            return "Coche Añadido";
+        }
+        public String Put(Coche c)
+        {
+            repo.EditCoche(c);
+            return "Coche Modificado";
+        }
+        public String Delete(int c)
+        {
+            repo.RemoveCoche(c);
+            return "Coche Eliminado";
+        }
     }
 }
